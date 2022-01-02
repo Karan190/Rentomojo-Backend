@@ -1,0 +1,32 @@
+<%- include('../partials/header.ejs') %>
+<title>Home</title>
+<%- include('../partials/navbar.ejs') %>
+    
+    <body>
+    <div class="container">
+    <% if(arr.length==0){%>
+       <h1>No match found !</h1>
+    <%}%>
+    <% for(let i=0;i < arr.length;i++){ %>
+        <div class="row justify-content-center">
+            <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+               Contact no. <%= i+1 %>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title"><%= arr[i].fullname %></h5>
+                <p class="card-text">Email id :  <%= arr[i].email %></p>
+                <p class="card-text">Phone no :  <%= arr[i].phone %></p>
+                <a href="/<%= arr[i]._id %>/modify" class="btn btn-info">Edit</a>
+                <a href="/<%= arr[i]._id %>/delete" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+        </div>
+        </div>
+        <% } %>
+    </div>
+
+</body>
+
+</html>

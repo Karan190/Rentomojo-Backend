@@ -1,0 +1,48 @@
+<%- include('../partials/header.ejs') %>
+<title>Search</title>
+<%- include('../partials/navbar.ejs') %>
+<body>
+    <div class="container mt-5">
+        <form action="/search" method="post" class="needs-validation" novalidate>
+            <div class="form-row justify-content-center">
+                <div class="col-sm-8">
+                    <label for="searchType">Search By</label>
+                    <select class="custom-select" id="searchType" name="searchType" required>
+                      
+                      <option value="name">Name</option>
+                      <option value="email">Email</option>
+                    </select>
+                    <div class="invalid-feedback">select any one</div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                  </div>
+                <div class="col-sm-8 mb-3">
+                    <label for="searchText">Search Text</label>
+                    <input type="text" class="form-control" id="searchText" placeholder="Enetr your search text here" name="searchText" required>
+                    <div class="invalid-feedback">
+                        Please enter your search text.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                
+                <div class="col-sm-8 mb-3">
+                    <button class="btn btn-primary " type="submit">Submit</button>
+                </div>
+                
+            </div>
+            
+        </form>
+    </div>
+
+
+
+
+    <script src="formValidationJs.js">
+        
+    </script>
+</body>
+
+</html>

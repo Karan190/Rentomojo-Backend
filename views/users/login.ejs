@@ -1,0 +1,45 @@
+<%- include('../partials/header.ejs') %>
+<title>Log In</title>
+<%- include('../partials/navbar.ejs') %>
+<body>
+
+    <div class="container mt-5">
+        <%- include('../partials/flash.ejs') %>
+        <form action="/login" method="post" class="needs-validation" novalidate>
+            <div class="form-row justify-content-center">
+                <div class="col-sm-8 mb-3">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email here" name="email" required>
+                    <div class="invalid-feedback">
+                        Please enter an Email.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-sm-8 mb-3">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password here" name="password" required>
+                    <div class="invalid-feedback">
+                        Please enter a Password.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-sm-8 mb-3">
+                    <button class="btn btn-success " type="submit">Log in</button>
+                </div>
+                
+            </div>
+            
+        </form>
+    </div>
+
+
+
+
+    <script src="formValidationJs.js"></script>
+</body>
+
+</html>

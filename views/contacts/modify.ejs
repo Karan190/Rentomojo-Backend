@@ -1,0 +1,46 @@
+<%- include('../partials/header.ejs') %>
+<title>Modify</title>
+<%- include('../partials/navbar.ejs') %>
+
+<body>
+    <div class="container mt-5">
+        <form action="/<%=contactObj._id%>?_method=PUT" method="post" class="needs-validation" novalidate>
+            <div class="form-row justify-content-center">
+                <div class="col-sm-8 mb-3">
+                    <label for="fullname">Full Name</label>
+                    <input type="text" class="form-control" id="fullname" placeholder="Enetr your name here" name="fullname" value="<%=contactObj.fullname%>" required>
+                    <div class="invalid-feedback">
+                        Please enter your fullname.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-sm-8 mb-3">
+                    <label for="phone">Phone Number</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Enter Phone here" name="phone" value="<%=contactObj.phone%>">
+                </div>
+                <div class="col-sm-8 mb-3">
+                    <label for="email">Email Address</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email here" name="email" value="<%=contactObj.email%>" required>
+                    <div class="invalid-feedback">
+                        Please enter an Email.
+                    </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
+                </div>
+                <div class="col-sm-8 mb-3">
+                    <button class="btn btn-primary " type="submit">Submit</button>
+                </div>
+                
+            </div>
+            
+        </form>
+    </div>
+
+
+    <script src="formValidationJs.js"></script>
+</body>
+
+</html>
